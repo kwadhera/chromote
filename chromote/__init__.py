@@ -64,6 +64,13 @@ class ChromeTab(object):
         """
         return self._send({"method": "Page.reload"})
 
+    def set_cookie(self, name, value, domain, path, httpOnly, expires):
+        """
+        Set a cookie
+        """
+        return self._send({"method": "Network.setCookie", "params": {"url": url}})
+    
+    
     def set_url(self, url):
         """
         Navigate the tab to the URL
