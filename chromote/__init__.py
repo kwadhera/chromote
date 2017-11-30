@@ -68,7 +68,7 @@ class ChromeTab(object):
         """
         Set a cookie
         """
-        return self._send({"method": "Network.setCookie", "params": {"url": url}})
+        return self._send({"method": "Network.setCookie", "params": {"name": name, "value": value,"domain": domain,"path": path,"httpOnly": httpOnly,"expires":expires}})
     
     
     def set_url(self, url):
